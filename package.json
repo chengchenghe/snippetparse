@@ -1,0 +1,29 @@
+{
+  "name": "snippetparse",
+  "version": "1.0.1",
+  "private": false,
+  "author": {
+    "name": "hechengcheng",
+    "email": "1021983957@qq.com",
+    "url": "https://hechengcheng.com"
+  },
+  "description": "将文件转化为vscode代码块 Parse any code file to vscode snippet.",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "bin": {
+    "snippetparse": "./cli.js",
+    "spar": "./cli.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "snippet",
+    "vscode snippet",
+    "snippetparse",
+    "vscode snippetparse"
+  ],
+  "bugs": {
+    "email": "1021983957@qq.com"
+  },
+  "readme": "README.md"
+}
