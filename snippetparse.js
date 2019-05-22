@@ -22,7 +22,7 @@ const handleParse = (inputPath, outputPath, snippet) => {
 
   readlineInterface.on('close', () => {
     if (!snippet.body.length) {
-      console.log('Error or Null file!')
+      console.log(`[ERROR OR EMPTY FILE! ${new Date().toLocaleString()}]:${inputPath}`)
     } else {
       // 将title移动到对象的键名位置,移除最终输出字符串对象的包裹{}
       let keyTitle = snippet.title
@@ -32,7 +32,7 @@ const handleParse = (inputPath, outputPath, snippet) => {
       // 写入文件中
       output.write(outcontent)
       // 结束
-      console.log('Success~')
+      console.log(`[SUCCESS ${new Date().toLocaleString()}]:${outputPath}`)
     }
   })
 
@@ -55,10 +55,10 @@ const snippetparse = (filePath, outSnippetPath) => {
   let inputPath = filePath
   let outputPath = outSnippetPath ? `${outSnippetPath}.snippet` : `${inputPath}.snippet`
   let snippet = {
-    title: 'title --powered by snippetparse',
+    title: 'title_' + Math.floor(Math.random() * 1000000),
     prefix: 'prefix',
-    body: [],
-    description: 'description --powered by snippetparse'
+    description: 'description --powered by snippetparse',
+    body: []
   }
   handleParse(inputPath, outputPath, snippet)
 }
